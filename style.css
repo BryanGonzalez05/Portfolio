@@ -58,10 +58,13 @@ body, html{
     height: 50px;
     background-color: inherit;
     cursor: pointer;
-    transition: ease 0.3s;
     animation: dropDownLogo 0.6s ease-out forwards;
     transform: translateY(-30px);
     opacity: 0;
+}
+
+#icon img{
+    transition:ease 0.3s;
 }
 
 hr{
@@ -104,13 +107,41 @@ hr{
     animation: fadePH 0.6s ease-in backwards;
 }
 
+#aboutMe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    color:white;
+    width: 100%;
+    height: 500px;
+}
+
+#infoBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    width: 90%;
+    max-width: 1100px;
+    height: 350px;
+}
+
+#infoBody img{
+    height: 300px;
+    width: 300px;
+    border: black solid 5px;
+    border-radius: 50px;
+    overflow: none;
+}
+
 #Projects{
     background-image: linear-gradient(90deg, #00bfff, #00f7ff, #00c9a7, #018a7a);
     display: flex;
     flex-direction: column;
     text-align: center;
     color: white;
-    padding-top:50px;
+    padding-top:40px;
     padding-bottom: 60px;
 }
 
@@ -227,12 +258,16 @@ hr{
     display:none;
 }
 
-#icon:hover{
+#icon img:hover{
     transform: translateY(-5px);
 }
 
 #navagate li:hover{
     transform: translateY(-5px);
+}
+
+#navagate li:active{
+    color: rgb(120, 120, 120);
 }
 
 #footer{
@@ -310,6 +345,22 @@ hr{
     
     h2{
         font-size: 15px;
+    }
+
+
+    #infoBody{
+        gap: 20px;
+    }
+
+    #infoBody img{
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (max-width:600px) {
+    #aboutMe{
+        padding-bottom: 40px;
     }
 }
 

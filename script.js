@@ -1,10 +1,11 @@
 //header scroll
 const headerContainer = document.getElementById("header-container");
+
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll",() => {
 
-    if(Math.abs(window.scrollY - lastScrollY) < 80){
+    if(Math.abs(window.scrollY - lastScrollY) < 60){
         return;
     }
     else if(window.scrollY > lastScrollY){
@@ -17,12 +18,26 @@ window.addEventListener("scroll",() => {
     lastScrollY = window.scrollY;
 });
 
+
 //home icon function
 const homeIcon = document.getElementById("icon");
+const aboutMeBtn = document.getElementById("aboutMeBtn");
+const aboutMe = document.getElementById("aboutMe");
+const projectBtn = document.getElementById("projectBtn");
+const projectNav = document.getElementById("Projects");
 
 homeIcon.addEventListener("click", () =>{
     window.scrollTo({top : 0, behavior: "smooth"});
 });
+
+aboutMeBtn.addEventListener("click", () =>{
+    aboutMe.scrollIntoView({behavior: "smooth"});
+});
+
+projectBtn.addEventListener("click", () =>{
+    projectNav.scrollIntoView({behavior: "smooth"});
+});
+
 
 //test project box
 const projectBox = document.querySelectorAll(".project-box")
@@ -85,5 +100,6 @@ closeBtn.addEventListener("click", () => {
     headerContainer.classList.remove("hidden");
     document.body.classList.remove("no-scroll");
 });
+
 
 
